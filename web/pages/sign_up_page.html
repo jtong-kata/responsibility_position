@@ -1,11 +1,16 @@
 <div class="no-footer">
   <header>
     活动1
-    <div class="header-right">
+    <div class="header-right" ng-switch="selection">
       <a class="btn-style btn-4" href="javascript:void(0);"
-         ng-click="record_sign_up_status()" >
+         ng-click="start()" ng-switch-default >
         <i class=''></i>
-        {{start_or_end_label}}
+        开始
+      </a>
+      <a class="btn-style btn-4" href="javascript:void(0);"
+         ng-click="end()" ng-switch-when ="running" >
+        <i class=''></i>
+        结束
       </a>
     </div>
   </header>
